@@ -1,24 +1,37 @@
-```javascript
-// LearnToCode App
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnToCode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="lesson-example"></h1>
+    <script>
+        var codeExamples = [
+            { lesson: "Hello World", code: "console.log('Hello, World!');"},
+            { lesson: "Variables", code: "let x = 5; console.log(x);"},
+            { lesson: "Functions", code: "function greet(name) { console.log(`Hello, ${name}!`); }"}
+        ];
 
-// Declaratie van variabelen en functies
-var currentLesson = 0;
-var codeExamples = [
-  { lesson: "Hello World", code: "console.log('Hello, World!');"},
-  { lesson: "Variables", code: "let x = 5; console.log(x);"},
-  { lesson: "Functions", code: "function greet(name) { console.log(`Hello, ${name}!`); }"},
-];
+        var currentLesson = 0;
 
-// Functie om een les te laten zien
-function showLesson() {
-  var lessonExample = document.getElementById("lesson-example");
-  lessonExample.innerHTML = codeExamples[currentLesson].code;
-  currentLesson++;
-}
+        function showLesson() {
+            document.getElementById("lesson-example").innerHTML = codeExamples[currentLesson].code;
+            currentLesson++;
+        }
 
-// Start de lessen
-document.addEventListener("DOMContentLoaded", function () {
-  // Toon het eerste voorbeeld
-  showLesson();
-});
+        document.addEventListener("DOMContentLoaded", function () {
+            showLesson();
+        });
+    </script>
+</body>
+</html>
 ```
