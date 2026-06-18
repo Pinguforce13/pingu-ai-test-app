@@ -1,0 +1,23 @@
+// LearnToCode App
+
+// Declaratie van variabelen en functies
+var currentLesson = 0;
+var codeExamples = [
+  { lesson: "Hello World", code: "console.log('Hello, World!');"},
+  { lesson: "Variables", code: "let x = 5; console.log(x);"},
+  { lesson: "Functions", code: "function greet(name) { console.log(`Hello, ${name}!`); }"},
+];
+
+// Functie om een les te laten zien
+function showLesson() {
+  var lessonExample = document.getElementById("lesson-example");
+  lessonExample.innerHTML = codeExamples[currentLesson].code;
+  currentLesson++;
+}
+
+// Start de lessen
+document.addEventListener("DOMContentLoaded", function () {
+  // Toon het eerste voorbeeld
+  showLesson();
+});
+```
